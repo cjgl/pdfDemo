@@ -1,8 +1,10 @@
-package cjgl.pdfDemo;
+package cn.cjgl.pdfDemo;
 
 import java.awt.Color;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import com.lowagie.text.Cell;
 import com.lowagie.text.Chapter;
@@ -37,8 +39,8 @@ public class App
         Font font = new Font(bfHei, 32);
         Document document = new Document(PageSize.A4.rotate(), 50, 50, 50, 50);
         document.addTitle("Success");
-        document.addAuthor("Antonio");
-        document.addSubject("First");
+        document.addAuthor("长铗归来");
+        document.addSubject("First-"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(new Date()));
         PdfWriter writer = PdfWriter.getInstance(document,
                 new FileOutputStream("d://pdfDemo.pdf")); 
         //writer.setViewerPreferences(PdfWriter.HideMenubar | PdfWriter.HideToolbar);

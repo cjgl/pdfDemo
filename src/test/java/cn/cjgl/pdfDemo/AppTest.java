@@ -1,4 +1,4 @@
-package cjgl.pdfDemo;
+package cn.cjgl.pdfDemo;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
